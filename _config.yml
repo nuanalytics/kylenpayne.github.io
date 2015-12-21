@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               Kyle N. Payne
+tagline:             Pulaski at Night
+url:                 http://kylenpayne.github.io
 paginate:            1
 baseurl:             ""
 
@@ -20,11 +20,14 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Kyle N. Payne
+  url:               kylenpayne.github.io
+  email:             knpayne2@illinois.edu
 
 # Custom vars
 version:             2.0.0
-github:
+github:							 
   repo:              https://github.com/poole/poole
+
+pages_list:       
+  About: '/about'

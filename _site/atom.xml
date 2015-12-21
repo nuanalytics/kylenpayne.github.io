@@ -1,22 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Poole</title>
- <link href="http://getpoole.com/atom.xml" rel="self"/>
- <link href="http://getpoole.com/"/>
- <updated>2015-11-03T12:36:24-06:00</updated>
- <id>http://getpoole.com</id>
+ <title>Kyle N. Payne</title>
+ <link href="http://kylenpayne.github.io/atom.xml" rel="self"/>
+ <link href="http://kylenpayne.github.io/"/>
+ <updated>2015-12-20T22:20:32-06:00</updated>
+ <id>http://kylenpayne.github.io</id>
  <author>
-   <name>Mark Otto</name>
-   <email>markdotto@gmail.com</email>
+   <name>Kyle N. Payne</name>
+   <email>knpayne2@illinois.edu</email>
  </author>
 
  
  <entry>
+   <title>Why you should write me a letter of recommendation</title>
+   <link href="http://kylenpayne.github.io/2015/12/20/why-recommend/"/>
+   <updated>2015-12-20T00:00:00-06:00</updated>
+   <id>http://kylenpayne.github.io/2015/12/20/why-recommend</id>
+   <content type="html">&lt;script scr=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;h6 id=&quot;hi&quot;&gt;Hi!&lt;/h6&gt;
+
+&lt;p&gt;If you are seeing this page, it’s likely that you recieved a request from me for writing me a letter of recommendation. I’d like
+to take some of your time to explain why I am a good candidate for your recommendation. I have broken said explanation 
+into convenient parts so that you can have a easier, and hopefully coherent understanding of my qualifications.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#professional&quot;&gt;Professional&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#academic&quot;&gt;Academic&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#personal&quot;&gt;Personal&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;professional&quot;&gt;Professional&lt;/h1&gt;
+
+&lt;h3 id=&quot;positions&quot;&gt;Positions&lt;/h3&gt;
+
+&lt;p&gt;I have had the great opporotunity to intern in several research intensive positions. My first experience in an industrial setting 
+was as a MAGNet Intern at the State Farm Research and Development Center (SFRDC). At this internship I learned much about the practical
+decisions that come with analyzing data. I acquired skills in server-side and data management technologies such as hadoop/hbase and 
+getting a first look at developing server-side applications in R using Shiny. I also developed professional skills such as report writing, consulting, and 
+(most importantly) presenting research findings.&lt;/p&gt;
+
+&lt;p&gt;After a year at the SFRDC, I decided (after taking the excellent Bioinformatics course by Professor Zhao) to move over to the Dow AgroScience research
+park office to work as a Bioinformatics Data Scientist. This position required learning about new and exciting developments in genetic engineering, crop science, and bioinformatics methodology.  Projects that I completed include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;building a sample size estimation application in Shiny and developing the server-side application to host such an application&lt;/li&gt;
+  &lt;li&gt;developing a command line utility to search for zinc finger nucleases in pDAB files.&lt;/li&gt;
+  &lt;li&gt;building, validating, and developing penalized high-dimensional regression models for RNAseq data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The time at this internship taught me much about applied bioinformatics, but also gave me a great opporotunity to develop programming skills in
+R and python, which has proven to be extremely useful in my work. I also gained insight into the work currently being accomplished in genetics in 
+general.&lt;/p&gt;
+
+&lt;h1 id=&quot;academic&quot;&gt;Academic&lt;/h1&gt;
+
+&lt;h3 id=&quot;research-interests&quot;&gt;Research Interests&lt;/h3&gt;
+
+&lt;p&gt;Currently, I have found two complementary areas of research that are remarkably interesting to me. Working with my brother (who is a PhD in Cognitive
+Neuroscience) on some projects, I have stumbled upon the growing usage of Functional Data Analysis (fda) in modeling physiological and neuroimaging data. 
+I have found that there are gaps currently in the application of fda in Electroencephalogram (EEG) research. Specifically, there is much interest in Event Related Potential (ERP) methods that could effectively explain contrasts between conditions in the average amplitude of a set of EEG signals. For example, given a task in which one is presented with a stimuli that is meant to produce a statistically significant change in the amplitude of the EEG signals at some time point, where the change likely continues for some interval. While changepoint analysis is a very well researched area for time series data, physiological data like EEG measurements lack an established theory for optimal tests of changepoints when smoothness of the data is inherent. Moreover, there are also gaps in the literature in modeling function-on-scalar regression when the response is multivariate. This is very much the case in EEG research, where we can view the response of EEG amplitude to be multivariate where the dimension of the response is determined by the number of electrodes used in an experiment. Likewise, there is an inherent issue of spatial correlation in neurophysiological/neuroimaging data, where measurements taken over the brain have an inherent spatial correlation likely determined partially by the underlying neural networks that exist in the brain. Spatially correlated functional data is a very new area of research. Understanding these and building substantive modeling strategies could potentially help practitioners develop richer theories of cognitive function.&lt;/p&gt;
+
+&lt;p&gt;Much like how next generation sequencing has ushered in a new era of quantitative methods for biology, new technologies for neuroscience in general have brought quantitative individuals to the forefront of developing new tools for the brain sciences. Moreover, these methodologies are likely to have more general application, and much like other applications throughout the history of statistical sciences, will inspire new ways to view random processes in new and exciting ways. Also, while I treasure the theoretical background that the UIUC statistics department has given to me, I also want to develop practically relevant tools for practitioners, towards this goal, I have dedicated much time in developing software building skills in R Python and C++ (all of which can be found on my github page).&lt;/p&gt;
+
+&lt;p&gt;Lastly, I have a personal stake in this research. My sister-in-law is currently in a high risk group for early development of Multiple Sclerosis. This has obviously created a huge amount of distress for my family. There is a great need for what some call Neuro-Quants. Early detection of many diseases tends to lead to better outcomes, and MS is no different. However, there are not many good personalized medicine tools for determining courses of action based on neuroimaging data. This is a active area of research that I want to contribute to.&lt;/p&gt;
+
+&lt;h3 id=&quot;appointments&quot;&gt;Appointments&lt;/h3&gt;
+
+&lt;p&gt;Currently, I am a Teaching Assistant for the introductory statistical methods course for graduate students in the Crop Science department, CPSC 440. This appointment has required me to produce educational materials for students, comprising of practical lessons in statistical script writing, to theoretical lessons on experimental design. I have learned alot in the process of teaching (especially about experiment design). Thanks Professor Lipka!&lt;/p&gt;
+
+&lt;h1 id=&quot;personal&quot;&gt;Personal&lt;/h1&gt;
+
+&lt;p&gt;I have come a long way at UIUC. I hopefully will leave a postive impact. I started the first and only Muay Thai club with well over 50 active members, practices 3 times a week, and started the first ever grant for university students who would like to compete at the amateur level. I have managed this for over a year, and will hopefully be able to pass this down to a community of students who care sincerely about the culture of Muay Thai. I am also an active competitor (my next fight is Febuary 6th!), and yes I understand the irony of wanting to help battle against neuro degenerative diseases while taking part in a sport that (almost surely) results in mild cognitive impairment.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Concluding, I hope that this has helped to establish a better understanding of my qualifications, both academic and professional. Please let me know if you would like any more information about my recent experiences. I hope that this page has helped you decide to write me a letter of recommendation. If not however, thank you for taking time out of your busy schedule to read this page.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>About</title>
+   <link href="http://kylenpayne.github.io/2015/12/02/about/"/>
+   <updated>2015-12-02T00:00:00-06:00</updated>
+   <id>http://kylenpayne.github.io/2015/12/02/about</id>
+   <content type="html">&lt;p&gt;Thanks for visiting my personal website. I am currently a Masters Student in Statistics at the University of Illinois at Urbana-Champaign. I have held research
+positions at State Farm, Dow Agroscience, and the Beckman Institute. I am currently looking for Ph.D. programs in Biostatistics.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Introducing Poole</title>
-   <link href="http://getpoole.com/2014/01/02/introducing-poole/"/>
+   <link href="http://kylenpayne.github.io/2014/01/02/introducing-poole/"/>
    <updated>2014-01-02T00:00:00-06:00</updated>
-   <id>http://getpoole.com/2014/01/02/introducing-poole</id>
+   <id>http://kylenpayne.github.io/2014/01/02/introducing-poole</id>
    <content type="html">&lt;p&gt;&lt;em&gt;The Strange Case of Dr. Jekyll and Mr. Hyde&lt;/em&gt; tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel’s supporting cast is a man by the name of Mr. Poole, Dr. Jekyll’s loyal butler.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -60,196 +145,16 @@
  </entry>
  
  <entry>
-   <title>Example content</title>
-   <link href="http://getpoole.com/2014/01/01/example-content/"/>
+   <title>Why you should write me a letter of recommendation</title>
+   <link href="http://kylenpayne.github.io/2014/01/01/example-content/"/>
    <updated>2014-01-01T00:00:00-06:00</updated>
-   <id>http://getpoole.com/2014/01/01/example-content</id>
-   <content type="html">&lt;div class=&quot;message&quot;&gt;
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-&lt;/div&gt;
+   <id>http://kylenpayne.github.io/2014/01/01/example-content</id>
+   <content type="html">&lt;h6 id=&quot;hi&quot;&gt;Hi!&lt;/h6&gt;
 
-&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+&lt;p&gt;If you are seeing this page, it’s likely that you recieved a request from me for writing me a letter of recommendation. I’d like
+to take some of your time to explain why I am a good candidate for your recommendation. I have broken said explanation 
+into convenient parts so that you can have a easier, and hopefully coherent understanding of my qualifications.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
-
-&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
-
-&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
-  &lt;li&gt;Citations, like &lt;cite&gt;— Mark otto&lt;/cite&gt;, should use &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-
-&lt;p&gt;Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number&lt;sup id=&quot;fnref:fn-sample_footnote&quot;&gt;&lt;a href=&quot;#fn:fn-sample_footnote&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; will lead you to a footnote. The syntax looks like:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Clicking this number[^fn-sample_footnote]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Each footnote needs the &lt;code&gt;^fn-&lt;/code&gt; prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[^fn-sample_footnote]: Handy! Now click the return link to go back.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.&lt;/p&gt;
-
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
-
-&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
-
-&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
-
-&lt;p&gt;Inline code is available with the &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; element. Snippets of multiple lines of code are supported through Pygments. Longer lines will automatically scroll horizontally when needed.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;return a + b&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You may also optionally show code snippets with line numbers. Add &lt;code&gt;linenos&lt;/code&gt; to the Pygments tags.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;return a + b&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
-
-&lt;h3 id=&quot;gists-via-github-pages&quot;&gt;Gists via GitHub Pages&lt;/h3&gt;
-
-&lt;p&gt;Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/13f94b734a4ddb132735.js?file=gist.md&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.&lt;/p&gt;
-
-&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
-  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
-  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
-  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
-  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
-  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
-
-  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
-  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
-
-  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
-  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
-
-&lt;p&gt;Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://placehold.it/800x400&quot; alt=&quot;placeholder&quot; title=&quot;Large example image&quot; /&gt;
-&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;placeholder&quot; title=&quot;Medium example image&quot; /&gt;
-&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;placeholder&quot; title=&quot;Small example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Upvotes&lt;/th&gt;
-      &lt;th&gt;Downvotes&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Totals&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;23&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Alice&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Charlie&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:fn-sample_footnote&quot;&gt;
-      &lt;p&gt;Handy! Now click the return link to go back. &lt;a href=&quot;#fnref:fn-sample_footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>What's Jekyll?</title>
-   <link href="http://getpoole.com/2013/12/31/whats-jekyll/"/>
-   <updated>2013-12-31T00:00:00-06:00</updated>
-   <id>http://getpoole.com/2013/12/31/whats-jekyll</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It’s an immensely useful tool. Find out more by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
