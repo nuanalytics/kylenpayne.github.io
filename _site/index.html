@@ -45,80 +45,204 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2015/12/20/why-recommend/">
-        Why you should write me a letter of recommendation
+      <a href="/2016/01/06/an-idea-about-what-is-fixed/">
+        What happens to the fixed effects?
       </a>
     </h1>
 
-    <time datetime="2015-12-20T00:00:00-06:00" class="post-date">20 Dec 2015</time>
+    <time datetime="2016-01-06T00:00:00-05:00" class="post-date">06 Jan 2016</time>
 
-    <script scr="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <style type="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
 
-<h6 id="hi">Hi!</h6>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
 
-<p>If you are seeing this page, it’s likely that you recieved a request from me for writing me a letter of recommendation. I’d like
-to take some of your time to explain why I am a good candidate for your recommendation. I have broken said explanation 
-into convenient parts so that you can have a easier, and hopefully coherent understanding of my qualifications.</p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<ol>
-  <li>
-    <p><a href="#professional">Professional</a></p>
-  </li>
-  <li>
-    <p><a href="#academic">Academic</a></p>
-  </li>
-  <li>
-    <p><a href="#personal">Personal</a></p>
-  </li>
-</ol>
+<h2 id="introduction">Introduction</h2>
 
-<h1 id="professional">Professional</h1>
+<p>I am currently working on a problem which seems rather applied in nature: What happens to the fixed effects in a mixed effects model when certain variables are treated as fixed instead of random? Let me clear up what I mean…</p>
 
-<h3 id="positions">Positions</h3>
+<p>Let’s say of the predictors that you choose for your mixed model, there is some subset of these that are fixed effects only, with design $X_{p}$.
+$X$ has the form</p>
 
-<p>I have had the great opporotunity to intern in several research intensive positions. My first experience in an industrial setting 
-was as a MAGNet Intern at the State Farm Research and Development Center (SFRDC). At this internship I learned much about the practical
-decisions that come with analyzing data. I acquired skills in server-side and data management technologies such as hadoop/hbase and 
-getting a first look at developing server-side applications in R using Shiny. I also developed professional skills such as report writing, consulting, and 
-(most importantly) presenting research findings.</p>
+<p><script type="math/tex">X = 
+\begin{pmatrix}
+X_1 \\
+\vdots \\
+X_N
+\end{pmatrix}</script>
+Where canonically, each $X_{i}$ corresponds to the design matrix of fixed effects for the $i^{th}$ cluster.</p>
 
-<p>After a year at the SFRDC, I decided (after taking the excellent Bioinformatics course by Professor Zhao) to move over to the Dow AgroScience research
-park office to work as a Bioinformatics Data Scientist. This position required learning about new and exciting developments in genetic engineering, crop science, and bioinformatics methodology.  Projects that I completed include:</p>
+<p>Likewise there is a set of predictors that are treated only as random effects with design matrix $Z$, where $Z_{l}$ is block diagonal $Z_{l} = blockdiag(Z_1, …, Z_N)$. Lastly, there is some subset of the predictors that are up for discussion. Let’s assume that the rank of the design matrix $W$ for these predictors is relatively small. Then we are attempting to compare the fixed effects for the two following models.</p>
 
-<ul>
-  <li>building a sample size estimation application in Shiny and developing the server-side application to host such an application</li>
-  <li>developing a command line utility to search for zinc finger nucleases in pDAB files.</li>
-  <li>building, validating, and developing penalized high-dimensional regression models for RNAseq data.</li>
-</ul>
+<script type="math/tex; mode=display">M_{0}: Y = X \beta + W \alpha + Z \gamma + \epsilon</script>
 
-<p>The time at this internship taught me much about applied bioinformatics, but also gave me a great opporotunity to develop programming skills in
-R and python, which has proven to be extremely useful in my work. I also gained insight into the work currently being accomplished in genetics in 
-general.</p>
+<p>with $\beta$ fixed, $\alpha \sim N(0_{Nq}, A), \gamma \sim N(0_{Nl}, \Gamma), \epsilon \sim N(0_{N_{T}}, \sigma^2 I_{N_{T}})$ where $N_{T} = \sum_{i=1}^{N}n_{i}$</p>
 
-<h1 id="academic">Academic</h1>
+<script type="math/tex; mode=display">M_{1}: Y = X^{*}\beta^{*} + Z\gamma + \epsilon</script>
 
-<h3 id="research-interests">Research Interests</h3>
+<p>with 
+<script type="math/tex">X^{*} = (X, WL)</script>,</p>
 
-<p>Currently, I have found two complementary areas of research that are remarkably interesting to me. Working with my brother (who is a PhD in Cognitive
-Neuroscience) on some projects, I have stumbled upon the growing usage of Functional Data Analysis (fda) in modeling physiological and neuroimaging data. 
-I have found that there are gaps currently in the application of fda in Electroencephalogram (EEG) research. Specifically, there is much interest in Event Related Potential (ERP) methods that could effectively explain contrasts between conditions in the average amplitude of a set of EEG signals. For example, given a task in which one is presented with a stimuli that is meant to produce a statistically significant change in the amplitude of the EEG signals at some time point, where the change likely continues for some interval. While changepoint analysis is a very well researched area for time series data, physiological data like EEG measurements lack an established theory for optimal tests of changepoints when smoothness of the data is inherent. Moreover, there are also gaps in the literature in modeling function-on-scalar regression when the response is multivariate. This is very much the case in EEG research, where we can view the response of EEG amplitude to be multivariate where the dimension of the response is determined by the number of electrodes used in an experiment. Likewise, there is an inherent issue of spatial correlation in neurophysiological/neuroimaging data, where measurements taken over the brain have an inherent spatial correlation likely determined partially by the underlying neural networks that exist in the brain. Spatially correlated functional data is a very new area of research. Understanding these and building substantive modeling strategies could potentially help practitioners develop richer theories of cognitive function.</p>
+<p><script type="math/tex">\beta^{*} = (\beta_{1}, \omega)^{T}</script>,</p>
 
-<p>Much like how next generation sequencing has ushered in a new era of quantitative methods for biology, new technologies for neuroscience in general have brought quantitative individuals to the forefront of developing new tools for the brain sciences. Moreover, these methodologies are likely to have more general application, and much like other applications throughout the history of statistical sciences, will inspire new ways to view random processes in new and exciting ways. Also, while I treasure the theoretical background that the UIUC statistics department has given to me, I also want to develop practically relevant tools for practitioners, towards this goal, I have dedicated much time in developing software building skills in R Python and C++ (all of which can be found on my github page).</p>
+<script type="math/tex; mode=display">L = 
+\begin{pmatrix}
+I_q \\
+\vdots \\
+I_q
+\end{pmatrix}</script>
 
-<p>Lastly, I have a personal stake in this research. My sister-in-law is currently in a high risk group for early development of Multiple Sclerosis. This has obviously created a huge amount of distress for my family. There is a great need for what some call Neuro-Quants. Early detection of many diseases tends to lead to better outcomes, and MS is no different. However, there are not many good personalized medicine tools for determining courses of action based on neuroimaging data. This is a active area of research that I want to contribute to.</p>
+<p>with dimension $Nq \times q$. $L$ flattens the block diagonal version of $W$ into a population averaged version. I.e. if</p>
 
-<h3 id="appointments">Appointments</h3>
+<script type="math/tex; mode=display">% <![CDATA[
+W = 
 
-<p>Currently, I am a Teaching Assistant for the introductory statistical methods course for graduate students in the Crop Science department, CPSC 440. This appointment has required me to produce educational materials for students, comprising of practical lessons in statistical script writing, to theoretical lessons on experimental design. I have learned alot in the process of teaching (especially about experiment design). Thanks Professor Lipka!</p>
+\begin{pmatrix}
+W_1 & 0 & \dots & 0 \\
+0 & W_2 & \dots & 0 \\
+0 & 0 & \ddots & 0 \\
+0 & 0 & 0 & W_N
+\end{pmatrix} %]]></script>
 
-<h1 id="personal">Personal</h1>
+<p>Then 
+<script type="math/tex">WL = 
+\begin{pmatrix}
+W_1 \\
+\vdots \\
+W_N
+\end{pmatrix}</script></p>
 
-<p>I have come a long way at UIUC. I hopefully will leave a postive impact. I started the first and only Muay Thai club with well over 50 active members, practices 3 times a week, and started the first ever grant for university students who would like to compete at the amateur level. I have managed this for over a year, and will hopefully be able to pass this down to a community of students who care sincerely about the culture of Muay Thai. I am also an active competitor (my next fight is Febuary 6th!), and yes I understand the irony of wanting to help battle against neuro degenerative diseases while taking part in a sport that (almost surely) results in mild cognitive impairment.</p>
+<p>So as you can probably tell by now, I want to know what happens to the hypothesis tests for the $\beta$ and $\beta_1$ when the $W$ variables to 
+be either fixed or random effects. This question has come as a consequence of fitting models to electrophysiological data, namely, averaged EEG data. 
+Due to the central limit theorem, the response $Y$, average amplitude of the electrical signal is guaranteed to be normal. Electrode label is a factor determining the location of the electrical response, and is the $W$ that inspired this line of work. This would result in a mostly sparse $W$ or $WL$ in either
+instance, where the non-zero entries are just identity for all entries which coincide with some electrode position. While there are instances of treating electrode position as a fixed effect, it seemingly makes more sense to me to treat it as random. My reasoning is that while typically the positions of the electrodes are fixed on the EEG caps, the sample space of the electrode postions (i.e. the head) is not discrete. We do not exhaust all possible positions of 
+electrode site. We are probably closer to taking a random sample of electrode positions on the skull. Moreover the interpretation for the parameter estimates
+of $\omega$ is messy at best, as we would have to pick some electrode position to be the reference level, and thus the inferences of $\hat{\omega}$ would have to be made relative to that level.</p>
 
-<h1 id="conclusion">Conclusion</h1>
+<p>Moreover if we treat electrode position as random, we more or less avoid these issues. The random effects are treated as nuissance parameters and are integrated out of the likelihood. We also get the interpretation of electrode site contributing to the variance structure of the model, which would make sense in the case that observations are spatially correlated depending on the electrode site.</p>
 
-<p>Concluding, I hope that this has helped to establish a better understanding of my qualifications, both academic and professional. Please let me know if you would like any more information about my recent experiences. I hope that this page has helped you decide to write me a letter of recommendation. If not however, thank you for taking time out of your busy schedule to read this page.</p>
+<h2 id="relative-efficiency">Relative Efficiency</h2>
 
+<p>If we use maximum likelihood to estimate either model, we end up with 
+<script type="math/tex">\hat{\beta}_{GLS} = (X^{T}V^{-1}X)^{-1}X^{T}V^{-1}Y</script>
+when $V$ is held constant. 
+One result I am trying to establish is under what conditions is the Wald test of the fixed effects in model $M_{0}$ is asymptotically relatively efficient to $M_{1}$. While there is a large issue of determining the distribution of $t$ test for fixed effects in mixed models, (see note 1), there is no controversy in terms of determining the asymptotic relative efficiency. We proceed in the fashion of Lehman and Romano.</p>
+
+<h3 id="theorem-1">Theorem 1.</h3>
+<p>Consider two competing sequences of testing sequences ${\phi}, { \hat{\phi }}$, based on test statistics $T_{n}$, and $\hat{T_{n}}$. Fix $0 &lt; \alpha &lt; \beta &lt; 1$, and let $\beta{j} &gt; \beta_{j0}$, then let $N(\beta_j)$ and $\hat{N(\beta_{j0})}$ be the smallest sample sizes necessary for $\phi$ and $\hat{\phi}$ to have
+power of $\beta$ against $\beta_{j0}$. Then</p>
+
+<p><script type="math/tex">lim_{\beta_j \rightarrow \beta_{j0}} \frac{N(\beta_j)}{\hat{N(\beta_{j0})}} = (\frac{\hat{(d\mu/d\beta)/\sigma}}{(d\mu/d\beta)/\sigma})^2</script>
+the right hand side is called the (Pitman) Asymptotic Relative Efficiency.</p>
+
+<h3 id="covariance-matrices">Covariance Matrices.</h3>
+
+<p>One result to compare the relative efficiency of the two models’ t-test for corresponding effects 
+<script type="math/tex">\beta_{j}, \beta^{*}_{j}</script></p>
+
+<p>This is the bulk of what I’m trying to establish in this work. Moreover, I am attempting to show this for the case that 
+both models are misspecified, and the true error distribution of $\epsilon$ is $\Sigma$.</p>
+
+<p>Therefore, let</p>
+
+<script type="math/tex; mode=display">\hat{\beta}_{GLS} = (X^{T}V_1^{-1}X)^{-1}X^{T}V_1^{-1}Y</script>
+
+<p>be the fixed effects estimator for model $M_0$. And likewise for $M_1$
+<script type="math/tex">\hat{\beta^{*}}_{GLS} = (X^{*T}V_2^{-1}X^{*})^{-1}X^{*T}V_2^{-1}Y</script></p>
+
+<p>Then under the assumption $Y_{N_{T}\times 1} \sim N(\mu, \Sigma)$, with $\mu \approx X\beta $, then the results of
+theorem 1 hold. There are alot of steps being skipped here, but essentially, the relative efficiency of the t-test is
+equivalent to the asymptotic efficiency of the effect estimates.</p>
+
+<p>We can find the variance matrices by applying the variance function, which results in</p>
+
+<p><script type="math/tex">V_1 = Z\Gamma Z^T + W E(\alpha \gamma^T) Z^{T} + Z E(\gamma \alpha^T) W^T + W A W^{T} + I_{N_{T}}\sigma^2</script>
+which under the simplifying assumption that $\alpha \perp \gamma$ we get</p>
+
+<script type="math/tex; mode=display">V_1 =  Z\Gamma Z^T  + W A W^{T} + I_{N_{T}}\sigma^2</script>
+
+<script type="math/tex; mode=display">V_2  = Z\Gamma Z^T + I_{N_{T}}\sigma^2</script>
+
+<p>We can find the variance of the parameter estimates 
+$\hat{\beta}_{GLS}$ 
+and 
+<script type="math/tex">\hat{\beta^{*}}_{GLS}</script>
+which results in</p>
+
+<script type="math/tex; mode=display">Cov(\hat{\beta}_{GLS}) = (X^{T}V_1^{-1}X)^{-1}X^{T}V_1^{-1} Cov(Y) V_1^{-1} X^{T} (X^{T}V_1^{-1}X)^{-1} =  (X^{T}V_1^{-1}X)^{-1}X^{T}V_1^{-1}  \Sigma  V_1^{-1}  X^{T} (X^{T}V_1^{-1}X)^{-1}</script>
+
+<p>and</p>
+
+<script type="math/tex; mode=display">Cov(\hat{\beta^{*}}_{GLS} ) = (X^{*T}V_2^{-1}X^{*})^{-1}X^{*T}V_2^{-1} \Sigma V_2^{-1} X^{*T} (X^{*T}V_2^{-1}X^{*})^{-1}</script>
+
+<p>We establish asymptotic relative efficiency of the wald $t$ test if the difference in the covariance matricies</p>
+
+<script type="math/tex; mode=display">Cov(\hat{\beta^{*}}_{1} ) - Var(\hat{\beta}_{GLS})</script>
+
+<p>is postive definite. This is sufficient, but not nessecary condition for the test of the $j^{th}$ fixed effect estimate for all point one sided 
+null hypotheses.</p>
+
+<h3 id="some-technical-results">Some Technical Results</h3>
+
+<h4 id="the-following-is-a-set-of-some-boring-technical-results">The following is a set of some boring technical results.</h4>
+<p>The term 
+<script type="math/tex">(X^{*T}V_2^{-1}X^{*})^{-1}</script>
+bookends the equation for the variance of the variance of $M_1$. 
+Using block inversion, we find that</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+(X^{*T}V_2^{-1}X^{*})^{-1} = 
+
+\begin{pmatrix}
+X^T V_2^{-1}X & X^{T}V_{2}^{-1} W L \\
+L^T W^T V_2^{-1} X & L^T W^T V_{2}^{-1} W L 
+\end{pmatrix}^{-1}
+
+=
+\begin{pmatrix}
+U_1 & U_2 \\
+U_3 & U_4
+\end{pmatrix} %]]></script>
+
+<p>The $U_{i}’s$ are found by block inversion. But as we are only taking the first $p$ entries of 
+<script type="math/tex">\hat{\beta^{*}}</script></p>
+
+<p>, then we only need
+$U_1, U_2$ as the others get multiplied by 0 by applying $(I_p, 0)\hat{\beta^{*}}$ to take the first $p$ entries that correspond to the
+same fixed effects.</p>
+
+<script type="math/tex; mode=display">U_1 = (X^T V_2^{-1}X - X^{T}V_{2}^{-1} W L (L^T W^T V_{2}^{-1} W L )^{-1}L^T W^T V_2^{-1} X)^{-1}</script>
+
+<p>and</p>
+
+<script type="math/tex; mode=display">U_2 = -(X^T V_2^{-1}X)^{-1} X^{T}V_{2}^{-1} W L (L^T W^T V_{2}^{-1} W L - L^T W^T V_2^{-1} X (X^T V_2^{-1}X)^{-1}  X^{T}V_{2}^{-1} W L  )^{-1}</script>
+
+<h2 id="if-only-everything-is-instantly-positive-definite">If only everything is instantly positive definite</h2>
+
+<script type="math/tex; mode=display">Cov(\hat{\beta^{*}}_1) = U_1X^{T}\Sigma X U_1 + U_2 L^{T}W^{T} \Sigma X U_{1} + U_{1}X^{T}\Sigma W L U_{2}^{T} + U_{2}L^{T}W^{T}\Sigma W L U_2^{T}</script>
+
+<p>and</p>
+
+<script type="math/tex; mode=display">Cov(\hat{\beta}) = (X^{T}V_1^{-1}X)^{-1}X^{T}V_1^{-1}  \Sigma  V_1^{-1}  X^{T} (X^{T}V_1^{-1}X)^{-1}</script>
+
+<p>We can see an obvious difference between the two matricies. In $M_{2}$ we have a fixed effects parameter that has a much more complicated mean structure,
+whereas for $M_1$ we end up with a more complicated covariance structure. There may be a large set of cases in which the</p>
 
   </article>
   
@@ -137,7 +261,7 @@ I have found that there are gaps currently in the application of fda in Electroe
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2015-12-20T22:20:32-06:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2016-01-08T15:59:02-05:00">2016</time>. All rights reserved.
         </small>
       </footer>
     </div>
